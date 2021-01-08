@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite One">
+    <!---
+    <listeners>
+        <listener class-name="com.listener.demo.MyListener">
+            <classes>
+                <class name="com.excel.demo.SmokeTest" />
+            </classes>
+        </listener>
+    </listeners>
+    -->
+    <test name="Test One"> <!--- BeforeTest & AfterTest Execute -->
+        <parameter name="customer_name" value="Adnan Rahman"/>
+        <parameter name="email" value="adnan@gmail.com" />
+        <classes>
+            <class name="com.excel.demo.SmokeTest" /> <!-- 2 -->
+            <class name="com.excel.demo.SanityTest" /> <!-- 1 -->
+        </classes>
+    </test>
+    <test name="Test Two">
+        <classes>
+            <class name="com.excel.demo.BaseTest" /> <!-- 1 -->
+        </classes>
+    </test>
+</suite>
